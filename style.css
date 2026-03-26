@@ -1,0 +1,139 @@
+:root {
+    --black: #000000;
+    --white: #ffffff;
+    --gray: #e0e0e0;
+}
+
+body {
+    background: var(--white);
+    color: var(--black);
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 20px;
+    text-transform: uppercase;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--black);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input, select, button {
+    border: 1px solid var(--black);
+    padding: 12px;
+    font-family: inherit;
+    background: var(--white);
+    outline: none;
+}
+
+button {
+    background: var(--black);
+    color: var(--white);
+    cursor: pointer;
+}
+
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: 10px;
+    max-height: 250px;
+    overflow-y: auto;
+    border: 1px solid var(--gray);
+    padding: 10px;
+}
+
+.item-card {
+    border: 1px solid var(--black);
+    padding: 10px;
+    text-align: center;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.item-card:hover {
+    background: var(--black);
+    color: var(--white);
+}
+
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid var(--gray);
+}
+
+.completed span {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.ai-box {
+    margin-top: 30px;
+    border-top: 2px solid var(--black);
+    padding-top: 20px;
+}
+
+.typewriter {
+    font-size: 0.9rem;
+    margin-top: 10px;
+    line-height: 1.4;
+}
+/* --- AFFAF BRANDING STYLES --- */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 2px solid var(--black);
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+}
+
+.logo-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+.developer-tag {
+    font-size: 0.65rem;
+    letter-spacing: 3px;
+    color: #666; /* Halka gray color professional lagta hai */
+    margin-top: 4px;
+    font-weight: bold;
+}
+
+/* Footer Signature - Page ke end mein automatic dikhega */
+body::after {
+    content: "© 2026 // SYSTEM AUTHORED BY AFFAF";
+    display: block;
+    text-align: center;
+    font-size: 0.55rem;
+    margin-top: 80px;
+    padding-bottom: 30px;
+    opacity: 0.4;
+    letter-spacing: 4px;
+}
+
+/* Divider line style */
+.divider {
+    border: 0;
+    border-top: 1px dashed var(--black);
+    margin: 40px 0;
+}

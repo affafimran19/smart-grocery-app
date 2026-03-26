@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESSENTIALS // AFFAF SYSTEM</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#000000">
+</head>
+<body>
+    <nav>
+        <div class="logo-group">
+            <div class="logo">ESSENTIALS // SYSTEM</div>
+            <div class="developer-tag">ARCHITECT: AFFAF // 2026</div> 
+        </div>
+        <button id="installBtn" style="display:none;">INSTALL APP</button>
+    </nav>
+
+    <main>
+        <section class="controls">
+            <input type="text" id="mainSearch" placeholder="SEARCH ITEMS OR ADD CUSTOM...">
+            <select id="catSelect">
+                <option value="ALL">ALL CATEGORIES</option>
+                <option value="Fruits">🍎 FRUITS</option>
+                <option value="Vegetables">🥦 VEGETABLES</option>
+                <option value="Kitchen">🍞 KITCHEN</option>
+                <option value="Dairy">🥛 DAIRY</option>
+                <option value="Drinks">🥤 DRINKS</option>
+                <option value="Snacks">🍟 SNACKS</option>
+                <option value="Bathroom">🧼 BATHROOM</option>
+                <option value="Cleaning">🧽 CLEANING</option>
+                <option value="Girls Essentials">💄 GIRLS ESSENTIALS</option>
+            </select>
+        </section>
+
+        <section id="catalogGrid" class="catalog-grid">
+            </section>
+
+        <hr class="divider">
+
+        <section class="list-section">
+            <h3>ACTIVE MANIFEST (YOUR LIST)</h3>
+            <div id="shoppingList"></div>
+        </section>
+
+        <section class="ai-box">
+            <button id="aiBtn">GENERATE AI INSIGHTS (GROQ)</button>
+            <p id="aiResponse" class="typewriter"></p>
+        </section>
+    </main>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
