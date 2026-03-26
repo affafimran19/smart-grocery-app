@@ -2,23 +2,23 @@ function renderItems(items) {
     const container = document.getElementById('itemsContainer');
     container.innerHTML = '';
     items.forEach(item => {
-        const card = document.createElement('div');
-        card.className = 'item-card';
-        card.innerHTML = `
+        const div = document.createElement('div');
+        div.className = 'item-card';
+        div.innerHTML = `
             <div class="emoji">${item.emoji}</div>
             <div class="name">${item.name}</div>
             <button onclick="addToManifest('${item.name}')" class="add-btn">ADD +</button>
         `;
-        container.appendChild(card);
+        container.appendChild(div);
     });
 }
 
-function addToManifest(name) {
+function addToManifest(itemName) {
     const list = document.getElementById('activeList');
-    const entry = document.createElement('div');
-    entry.className = 'manifest-entry';
-    entry.innerHTML = `<span>[ ]</span> ${name}`;
-    list.appendChild(entry);
+    const li = document.createElement('div');
+    li.className = 'manifest-item';
+    li.innerHTML = `<span>[ ]</span> ${itemName}`;
+    list.appendChild(li);
 }
 
 document.getElementById('mainSearch').addEventListener('input', (e) => {
